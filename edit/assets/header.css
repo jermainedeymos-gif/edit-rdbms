@@ -1,0 +1,47 @@
+/* Hero Banner Style */
+.hero-banner {
+    background: linear-gradient(135deg, #2f80ed, #56ccf2);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    margin: 40px auto;
+    max-width: 1000px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+    z-index: 0;
+    animation: rotate 12s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-banner h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    color: white;
+}
